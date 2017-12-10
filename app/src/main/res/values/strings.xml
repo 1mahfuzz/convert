@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Convert</string>
+
+    <string name="hint">Enter your number to convert</string>
+
+    <string name="genarate">Genarate</string>
+
+    <string-array name="units">
+
+        <item>KM</item>
+        <item>HM</item>
+        <item>DM</item>
+        <item>M</item>
+        <item>DCM</item>
+        <item>CM</item>
+        <item>MM</item>
+
+    </string-array>
+
+</resources>
