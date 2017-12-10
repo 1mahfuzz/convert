@@ -14,10 +14,9 @@ import android.widget.Spinner;
   * This will handle all the work for meter conversion */
 
 public class MeterActivity extends AppCompatActivity {
-    private static final String TAG = "Convert";
 
     //Constants goes here
-
+    private static final String TAG = "Convert";
     //Widgets
     Spinner mSpinner1,mSpinner2;
     Button mGenarateButton;
@@ -29,7 +28,6 @@ public class MeterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meter);
-
         //initilizing spinner
         mSpinner1 = findViewById(R.id.spinner1);
         mSpinner2 = findViewById(R.id.spinner2);
@@ -37,11 +35,9 @@ public class MeterActivity extends AppCompatActivity {
         mGenarateButton = findViewById(R.id.buttonGenarate);
 
         String[] dropDownValues; // this variable will conatin the values for spinner
-
         dropDownValues = getResources().getStringArray(R.array.units); // getting the string array from string file and putting it to dropDownValues Variable
 
         //Creating a adpter for spinner
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,dropDownValues);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -52,42 +48,32 @@ public class MeterActivity extends AppCompatActivity {
         mSpinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
-
                 mFirstNum = position + 1; //get the position of the selected item
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
 
         mSpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
-
                 mSecondNum = position + 1; //get the position of the selected item
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
 
         mGenarateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
               Calculate calculate = new Calculate(mFirstNum,mSecondNum); //created  object and passing parameter
-
             }
         });
-
     }
 }
