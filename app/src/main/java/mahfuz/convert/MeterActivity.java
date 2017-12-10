@@ -50,9 +50,9 @@ public class MeterActivity extends AppCompatActivity {
 
         mSpinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
-                Log.d(TAG, "onItemSelected: Position: "+i);
+                Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
 
             }
 
@@ -64,7 +64,7 @@ public class MeterActivity extends AppCompatActivity {
 
         mSpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
             }
 
