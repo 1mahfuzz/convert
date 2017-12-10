@@ -2,6 +2,7 @@ package mahfuz.convert;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 * This will handle all the work for meter conversion */
 
 public class MeterActivity extends AppCompatActivity {
+    private static final String TAG = "Convert";
 
     //Constants goes here
 
@@ -49,7 +51,7 @@ public class MeterActivity extends AppCompatActivity {
         mSpinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Log.d(TAG, "onItemSelected: Position: "+i);
             }
 
             @Override
