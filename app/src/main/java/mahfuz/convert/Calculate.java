@@ -17,7 +17,8 @@ public class Calculate {
 
     //global variable
     int answer;
-    int one = 1;
+    int mNumberToMultiply = 10;
+    int numberOfZero = 10;
 
     //A non argumented constructor
     public Calculate(){
@@ -31,10 +32,17 @@ public class Calculate {
             answer = ( firstNum - secondNum ) - 1;
 
             String answerInText = String.valueOf(answer);
-            answerInText = one + answerInText;
 
-            Log.d(TAG, "Calculate: "+answerInText);
+
+            for (int i = 0 ; i <= answer ; i++){
+
+                numberOfZero = numberOfZero * 10;
+
+            }
+
+            Log.d(TAG, "Calculate: "+numberOfZero);
         }
+
 
 
 
