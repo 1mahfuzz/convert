@@ -9,10 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-/* Information About This activity */
-/*
-* This is the MeterActivity
-* This will handle all the work for meter conversion */
+/** Information About This activity
+  * This is the MeterActivity
+  * This will handle all the work for meter conversion */
 
 public class MeterActivity extends AppCompatActivity {
     private static final String TAG = "Convert";
@@ -56,7 +55,7 @@ public class MeterActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
 
-                mFirstNum = position;
+                mFirstNum = position; //get the position of the selected item
 
             }
 
@@ -71,7 +70,8 @@ public class MeterActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
-                mSecondNum = position;
+
+                mSecondNum = position; //get the position of the selected item
             }
 
             @Override
@@ -84,7 +84,7 @@ public class MeterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Calculate calculate = new Calculate();
+              Calculate calculate = new Calculate(mFirstNum,mSecondNum); //created  object and passing parameter
 
             }
         });
