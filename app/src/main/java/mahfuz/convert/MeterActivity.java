@@ -80,7 +80,14 @@ public class MeterActivity extends AppCompatActivity {
             }
         });
 
+        mGenarateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Calculate calculate = new Calculate();
+
+            }
+        });
 
     }
 }
