@@ -16,9 +16,9 @@ import static mahfuz.convert.ControllerActivity.TAG;
 public class Calculate {
 
     //global variable
-    int answer;
+    int mLoop;
     int mNumberToMultiply = 10;
-    int numberOfZero = 10;
+    int mNumberOfZero = 1;
 
     //A non argumented constructor
     public Calculate(){
@@ -28,19 +28,15 @@ public class Calculate {
     //This is a parameteries constructor
     public Calculate(int firstNum,int secondNum){
 
-        if (firstNum > secondNum){
-            answer = ( firstNum - secondNum ) - 1;
+        if (firstNum > secondNum){ // check if the first number is greater than second number
+            mLoop = ( firstNum - secondNum ) - 1; // subtract second number from first number and then subtract 1
 
-            String answerInText = String.valueOf(answer);
+            String answerInText = String.valueOf(mNumberOfZero); // convert int into string
 
-
-            for (int i = 0 ; i <= answer ; i++){
-
-                numberOfZero = numberOfZero * 10;
-
+            for (int i = 0; i <= mLoop; i++){ // run the loop to the value of mLoop
+                answerInText = answerInText.concat("0"); // concat 0 to 1 each time the loop run
             }
-
-            Log.d(TAG, "Calculate: "+numberOfZero);
+            Log.d(TAG, "Calculate: "+answerInText); // show the output in logcat
         }
 
 

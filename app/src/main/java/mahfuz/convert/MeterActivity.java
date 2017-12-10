@@ -55,7 +55,7 @@ public class MeterActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
 
-                mFirstNum = position; //get the position of the selected item
+                mFirstNum = position + 1; //get the position of the selected item
 
             }
 
@@ -71,7 +71,7 @@ public class MeterActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
 
-                mSecondNum = position; //get the position of the selected item
+                mSecondNum = position + 1; //get the position of the selected item
             }
 
             @Override
