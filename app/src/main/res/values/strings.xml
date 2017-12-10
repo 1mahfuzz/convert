@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Convert</string>
-
-    <string name="hint">Enter your number to convert</string>
-
+    <string name="hint">Enter your number</string>
     <string name="genarate">Genarate</string>
+    <string name="header">Unit Conversion</string>
+    <string name="meter">Meter</string>
+    <string name="to">TO</string>
+    <string name="answer_hint">YOUR ANSWER WILL BE PRINT HERE</string>
 
     <string-array name="units">
 
