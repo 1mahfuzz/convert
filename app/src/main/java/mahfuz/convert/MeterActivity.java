@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 /* Information About This activity */
@@ -19,9 +20,8 @@ public class MeterActivity extends AppCompatActivity {
     //Constants goes here
 
     //Widgets
-
     Spinner mSpinner1,mSpinner2;
-
+    Button mGenarateButton;
     //Variables
     public int mFirstNum; //this varibale is used for the index of selected item in spinner1
     public int mSecondNum; //this varibale is used for the index of selected item in spinner1
@@ -34,6 +34,8 @@ public class MeterActivity extends AppCompatActivity {
         //initilizing spinner
         mSpinner1 = findViewById(R.id.spinner1);
         mSpinner2 = findViewById(R.id.spinner2);
+        //initilizing button
+        mGenarateButton = findViewById(R.id.buttonGenarate);
 
         String[] dropDownValues; // this variable will conatin the values for spinner
 
@@ -54,6 +56,8 @@ public class MeterActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
 
+                mFirstNum = position;
+
             }
 
             @Override
@@ -66,6 +70,8 @@ public class MeterActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
+                Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
+                mSecondNum = position;
             }
 
             @Override
@@ -73,6 +79,8 @@ public class MeterActivity extends AppCompatActivity {
 
             }
         });
+
+
 
     }
 }
