@@ -28,7 +28,6 @@ public class Calculate {
     }
     //This is a parameteries constructor
     public double getAnswer(int firstNum,int secondNum,double value){
-
         if (firstNum > secondNum){ // check if the first number is greater than second number
             mLoop = ( firstNum - secondNum ); // subtract second number from first number and then subtract 1
 
@@ -38,10 +37,9 @@ public class Calculate {
             }
 
             mNumberToMultiply = Integer.parseInt(answerInText); // make the string integer type
-
             mAnswer = value / mNumberToMultiply; // multiply the number of value by mNumberToMultiply
-
             Log.d(TAG, "Calculate: "+mAnswer); // show the output in logcat
+
         } else if (firstNum < secondNum ){
             mLoop = ( secondNum - firstNum ); // subtract second number from first number and then subtract 1
 
@@ -51,16 +49,13 @@ public class Calculate {
             }
 
             mNumberToMultiply = Integer.parseInt(answerInText); // make the string integer type
-
             mAnswer = value * mNumberToMultiply; // multiply the number of value by mNumberToMultiply
-
             Log.d(TAG, "Calculate: "+mAnswer); // show the output in logcat
-        } else if (firstNum == secondNum) {
-            mAnswer = value;
+        } else if (firstNum == secondNum) { // check if the two number is equal
+            mAnswer = value; // if both number is equal then set the answer to value
         } else {
-            mAnswer = -0;
+            mAnswer = -0; //if all the condition failed then set the answer to -0
         }
-
-        return mAnswer;
+        return mAnswer; // return answer to activity
     }
 }

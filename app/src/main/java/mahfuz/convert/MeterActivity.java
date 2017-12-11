@@ -20,7 +20,7 @@ public class MeterActivity extends AppCompatActivity {
 
     //Constants goes here
     private static final String TAG = "Convert";
-    //Widgets
+    //Widgets declaring the widgets
     Spinner mSpinner1,mSpinner2;
     Button mGenarateButton;
     TextView mDisplayView;
