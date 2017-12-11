@@ -6,6 +6,7 @@
     <string name="meter">Meter</string>
     <string name="to">TO</string>
     <string name="answer_hint">YOUR ANSWER WILL BE PRINT HERE</string>
+    <string name="error">Oops something went wrong!</string>
 
     <string-array name="units">
 
