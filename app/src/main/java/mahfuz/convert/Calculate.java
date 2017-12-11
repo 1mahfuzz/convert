@@ -33,20 +33,7 @@ public class Calculate {
             mLoop = ( firstNum - secondNum ); // subtract second number from first number and then subtract 1
 
             String answerInText = String.valueOf(mNumberOfZero); // convert int into string
-            for (int i = 0; i <= mLoop; i++){ // run the loop to the value of mLoop
-                answerInText = answerInText.concat("0"); // concat 0 to 1 each time the loop run
-            }
-
-            mNumberToMultiply = Integer.parseInt(answerInText); // make the string integer type
-
-            mAnswer = value * mNumberToMultiply; // multiply the number of value by mNumberToMultiply
-
-            Log.d(TAG, "Calculate: "+mAnswer); // show the output in logcat
-        } else if (firstNum < secondNum ){
-            mLoop = ( secondNum - firstNum ); // subtract second number from first number and then subtract 1
-
-            String answerInText = String.valueOf(mNumberOfZero); // convert int into string
-            for (int i = 0; i <= mLoop; i++){ // run the loop to the value of mLoop
+            for (int i = 1; i <= mLoop; i++){ // run the loop to the value of mLoop
                 answerInText = answerInText.concat("0"); // concat 0 to 1 each time the loop run
             }
 
@@ -55,12 +42,23 @@ public class Calculate {
             mAnswer = value / mNumberToMultiply; // multiply the number of value by mNumberToMultiply
 
             Log.d(TAG, "Calculate: "+mAnswer); // show the output in logcat
+        } else if (firstNum < secondNum ){
+            mLoop = ( secondNum - firstNum ); // subtract second number from first number and then subtract 1
+
+            String answerInText = String.valueOf(mNumberOfZero); // convert int into string
+            for (int i = 1; i <= mLoop; i++){ // run the loop to the value of mLoop
+                answerInText = answerInText.concat("0"); // concat 0 to 1 each time the loop run
+            }
+
+            mNumberToMultiply = Integer.parseInt(answerInText); // make the string integer type
+
+            mAnswer = value * mNumberToMultiply; // multiply the number of value by mNumberToMultiply
+
+            Log.d(TAG, "Calculate: "+mAnswer); // show the output in logcat
         } else if (firstNum == secondNum) {
             mAnswer = value;
         } else {
-
             mAnswer = -0;
-
         }
 
         return mAnswer;
