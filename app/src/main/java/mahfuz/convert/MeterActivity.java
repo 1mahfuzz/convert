@@ -45,7 +45,7 @@ public class MeterActivity extends AppCompatActivity {
         //initilizing edittext
         mValue = findViewById(R.id.value);
 
-        String[] dropDownValues; // this variable will conatin the values for spinner
+        String[] dropDownValues; // this variable will contain the values for spinner
         dropDownValues = getResources().getStringArray(R.array.units); // getting the string array from string file and putting it to dropDownValues Variable
 
         //Creating a adpter for spinner
@@ -66,7 +66,7 @@ public class MeterActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
-        });
+        });// end of spinner1 listener
 
         mSpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -79,7 +79,7 @@ public class MeterActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
-        });
+        });// end of spinner2 listener
 
         mGenarateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +99,6 @@ public class MeterActivity extends AppCompatActivity {
                     mDisplayView.setText(""+answer+mUnit.toLowerCase()); // if the answer is not equal to -0 then set the display view textview to answer
                 }
             }
-        });
+        });// end of mGenarateButton
     }
 }

@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import static mahfuz.convert.ControllerActivity.TAG;
 
-/** Information About this class
+/**Information About this class
   *This class will calcuate and return data
   *This class will require three parameter
   *This class will be in lots of use */
