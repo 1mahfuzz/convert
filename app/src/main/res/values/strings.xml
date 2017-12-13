@@ -20,5 +20,16 @@
         <item>MM</item>
 
     </string-array>
+    <string-array name="units_liter">
+
+        <item>KL</item>
+        <item>HL</item>
+        <item>DL</item>
+        <item>L</item>
+        <item>DCL</item>
+        <item>CL</item>
+        <item>ML</item>
+
+    </string-array>
 
 </resources>
