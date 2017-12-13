@@ -7,8 +7,9 @@
     <string name="to">TO</string>
     <string name="answer_hint">YOUR ANSWER WILL BE PRINT HERE</string>
     <string name="error">Oops something went wrong!</string>
+    <string name="liter">LITER</string>
 
-    <string-array name="units">
+    <string-array name="units_meter">
 
         <item>KM</item>
         <item>HM</item>

@@ -46,7 +46,7 @@ public class MeterActivity extends AppCompatActivity {
         mValue = findViewById(R.id.value);
 
         String[] dropDownValues; // this variable will contain the values for spinner
-        dropDownValues = getResources().getStringArray(R.array.units); // getting the string array from string file and putting it to dropDownValues Variable
+        dropDownValues = getResources().getStringArray(R.array.units_meter); // getting the string array from string file and putting it to dropDownValues Variable
 
         //Creating a adpter for spinner
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,dropDownValues);
