@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /** Information About This activity
  * This is the MeterActivity
@@ -76,6 +77,24 @@ public class LiterActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });// end of spinner2 listener
+        mGenarateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                mEditTextValue = Double.parseDouble(mValue.getText().toString()); // converting text in double
+
+                Calculate calculate = new Calculate(); //calling the constructor of calculate class
+
+                double answer; // creating an double variable which will contain answer;
+
+                answer = calculate.getAnswer(mFirstNum,mSecondNum,mEditTextValue); // calling getAnswer method in calculate class for answer and passing few parameters
+
+                if (answer == -0){ // checking that the answer is equal to -0
+                    Toast.makeText(getApplicationContext(),R.string.error,Toast.LENGTH_SHORT).show(); // if the answer is equal to -0 show this toast
+                }else {
+                    mDisplayView.setText(""+answer+mUnit.toLowerCase()); // if the answer is not equal to -0 then set the display view textview to answer
+                }
+            }
+        });// end of mGenarateButton
     }
 }
