@@ -2,6 +2,9 @@ package mahfuz.convert;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,6 +52,30 @@ public class LiterActivity extends AppCompatActivity {
         //setting the adapter with spinner
         mSpinner1.setAdapter(adapter); // spinner1 adapter set
         mSpinner2.setAdapter(adapter); // spinner2 adapter set
+        mSpinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
+                mFirstNum = position + 1; //get the position of the selected item
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });// end of spinner1 listener
+
+        mSpinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
+                mSecondNum = position + 1; //get the position of the selected item
+                mUnit = adapterView.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });// end of spinner2 listener
 
     }
 }
