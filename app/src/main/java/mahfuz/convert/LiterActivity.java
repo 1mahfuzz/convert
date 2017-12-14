@@ -70,7 +70,7 @@ public class LiterActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 Log.d(TAG, "onItemSelected: Position: "+position); //print the position of the selected item in the logcat
                 mSecondNum = position + 1; //get the position of the selected item
-                mUnit = adapterView.getItemAtPosition(position).toString();
+                mUnit = adapterView.getItemAtPosition(position).toString();// store the selected item in this variable
             }
 
             @Override
